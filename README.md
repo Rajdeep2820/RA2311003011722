@@ -50,8 +50,8 @@ A microservice built to optimally schedule vehicle maintenance tasks across mult
 ![Request Body Payload](./assets/request_body.png)
 *Profile payload successfully authenticated*
 
-![Response for ClientID and Client Secret](./assets/ClientInfo.png)
-*Profile payload successfully authenticated*
+![Request Body Payload](./assets/request_body.png)
+*ClientID and Client Secret received successfully*
 
 **2. Final Dynamic Programming Algorithmic Results**
 ![Optimized Schedule Return](./assets/response.png)
