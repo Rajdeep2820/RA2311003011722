@@ -82,6 +82,20 @@ class EvaluationService {
       throw error;
     }
   }
+
+  async getNotifications() {
+    try {
+      await this.logger.log('backend', 'debug', 'service', 'Fetching Stage 6 notifications data...');
+      // Note: Endpoint from Stage 6 is exactly: http://20.207.122.201/evaluation-service/notifications
+      const response = await axios.get(`${this.baseURL}/evaluation-service/notifications`, {
+        headers: this.getAuthorizedHeaders()
+      });
+      return response.data;
+    } catch (error) {
+      await this.logger.log('backend', 'error', 'service', `Notifications fetch failed: ${error.message}`);
+      throw error;
+    }
+  }
 }
 
 module.exports = new EvaluationService();
